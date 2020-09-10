@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
     //return 'Hello Laravel';
 });
+
+Route::get('dashboard','BackendController@dashboardfun');
