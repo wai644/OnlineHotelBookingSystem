@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('welcome');
     //return 'Hello Laravel';
 });
+//Frontend
+Route::get('/','PageController@home')->name('homepage');
 
+//Backend
 Route::get('dashboard','BackendController@dashboardfun');
