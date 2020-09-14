@@ -157,14 +157,18 @@
                             </div>
                         </div>
                    </div>
-                    <div class=" col-xl-4 col-lg-4">
+                    <div class=" col-xl-6 col-lg-6">
                         <div class="customer-caption">
-                            <span>About our company</span>
-                            <h2>Make the customer the hero of your story</h2>
-                            <div class="caption-details">
-                                <p class="pera-dtails">Lorem ipsum dolor sit amet, consectetur adipisic- ing elit, sed do eiusmod tempor inc. </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
-                                <a href="#" class="btn more-btn1">Learn More <i class="ti-angle-right"></i> </a>
+                            <h2 style="text-align: center">About our company</h2>
+                            <p style="text-align: center;"><h4>Your welcoming sanctuary in the heart of Yangon</h4></p>
+                            
+                                <p><h4>Take time and make time…Feel relaxed, rejuvenated and entirely at home when you stay with us at the Novotel Yangon Max!</h4></p>
+<p><h4>
+Just 20 minutes from the Yangon International Airport (RGN) on Pyay Road, Accor’s five-star Novotel Yangon Max is ideally located within a 10-kilometre radius of most embassies and international organizations, only four kilometres from the sacred Shwedagon Pagoda, close to the historical city centre, and a mere stroll from Junction Square shopping centre.</h4></p>
+<p><h4>
+At Novotel Yangon Max we understand the importance of balancing your time to maximise your stay. Whether you’re travelling for business or leisure, our wide selection of recreational facilities, mouth-watering Asian and international cuisine, stylish and comfortable rooms and state-of-the-art business and conference services will ensure this peaceful oasis is your ideal choice for a relaxing, rewarding and energizing experience in the heart of Myanmar’s largest city.</h4>
+ </p>
+                    
                             </div>
                         </div>
                     </div>
@@ -273,199 +277,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="room-btn pt-70">
-                        <a href="#" class="btn view-btn1">View more  <i class="ti-angle-right"></i> </a>
-                    </div>
-                </div>
             </div>
 
         </section>
         <!-- Room End -->
 
-        <!-- Dining Start -->
-        <div class="dining-area dining-padding-top">
-            <!-- Single Left img -->
-            <div class="single-dining-area left-img">
-                <div class="container">
-                    <div class="row justify-content-end">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="dining-caption">
-                                <span>Our resturent</span>
-                                <h3>Dining & Drinks</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud.</p>
-                                <a href="#" class="btn border-btn">Learn More <i class="ti-angle-right"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <!-- single Right img -->
-            <div class="single-dining-area right-img">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="dining-caption text-right">
-                                <span>Our Pool</span>
-                                <h3>Swimming Pool</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud.</p>
-                                <a href="#" class="btn border-btn">Learn More  <i class="ti-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
-        <!-- Dining End -->
-
         <!-- Testimonial Start -->
-        <div class="testimonial-area testimonial-padding">
-            <div class="container">
-               <div class="row justify-content-center">
-                    <div class="col-xl-9 col-lg-9 col-md-9">
-                        <div class="h1-testimonial-active">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial pt-65">
-                                <!-- Testimonial tittle -->
-                                <div class="font-back-tittle mb-105">
-                                    <div class="archivment-front">
-                                        <img src="{{ asset('frontend/assets/img/logo/testimonial.png')}}" alt="">
-                                    </div>
-                                    <h3 class="archivment-back">Testimonial</h3>
-                                </div>
-                                 <!-- Testimonial Content -->
-                                <div class="testimonial-caption text-center">
-                                    <p>Yorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-                                    </p>
-                                    <!-- Rattion -->
-                                    <div class="testimonial-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="rattiong-caption">
-                                        <span>Clifford Frazier, <span>Regular Client</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial  pt-65">
-                                <!-- Testimonial tittle -->
-                                <div class="font-back-tittle mb-105">
-                                    <div class="archivment-front">
-                                        <img src="{{ asset('frontend/assets/img/logo/testimonial.png')}}" alt="">
-                                    </div>
-                                    <h3 class="archivment-back">Testimonial</h3>
-                                </div>
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption text-center">
-                                    <p>Yorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-                                    </p>
-                                    <div class="testimonial-ratting">
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                        <a href="#"><i class="fas fa-star"></i></a>
-                                    </div>
-                                    <div class="rattiong-caption">
-                                        <span>Clifford Frazier, <span>Regular Client</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-        </div>
         <!-- Testimonial End -->
 
         <!-- Blog Start -->
-       <div class="blog-area blog-padding">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8">
-                        <!-- Seciton Tittle  -->
-                        <div class="font-back-tittle mb-50">
-                            <div class="archivment-front">
-                                <h3>Our Blog</h3>
-                            </div>
-                            <h3 class="archivment-back">Recent News</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <!-- Single Blog -->
-                        <div class="single-blog mb-30">
-                            <div class="blog-img">
-                                <a href="single-blog.html"><img src="{{ asset('frontend/assets/img/our_blog/blog-img1.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="blog-caption">
-                                <div class="blog-cap-top d-flex justify-content-between mb-40">
-                                    <span>news</span>
-                                    <ul><li>by<a href="#"> Jhon Guru</a></li></ul>
-                                </div>
-                                <div class="blog-cap-mid">
-                                    <p><a href="single-blog.html">5 Simple Tricks for Getting Stellar Hotel Service Wherever You Are</a></p>
-                                </div>
-                                <!-- Comments -->
-                                <div class="blog-cap-bottom d-flex justify-content-between">
-                                    <span>Feb 28, 2020</span>
-                                    <span><img src="{{ asset('frontend/assets/img/our_blog/blog-comments-icon.jpg')}}" alt="">3</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <!-- Single Blog -->
-                        <div class="single-blog mb-30">
-                            <div class="blog-img">
-                               <a href="single-blog.html"> <img src="{{ asset('frontend/assets/img/our_blog/blog-img2.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="blog-caption">
-                                <div class="blog-cap-top d-flex justify-content-between mb-40">
-                                    <span>news</span>
-                                    <ul><li>by<a href="#"> Jhon Guru</a></li></ul>
-                                </div>
-                                <div class="blog-cap-mid">
-                                    <p><a href="single-blog.html">5 Simple Tricks for Getting Stellar Hotel Service Wherever You Are</a></p>
-                                </div>
-                                <!-- Comments -->
-                                <div class="blog-cap-bottom d-flex justify-content-between">
-                                    <span>Feb 28, 2020</span>
-                                    <span><img src="{{ asset('frontend/assets/img/our_blog/blog-comments-icon.jpg')}}" alt="">3</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <!-- Single Blog -->
-                        <div class="single-blog mb-30">
-                            <div class="blog-img">
-                                <a href="single-blog.html"><img src="{{ asset('frontend/assets/img/our_blog/blog-img3.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="blog-caption">
-                                <div class="blog-cap-top d-flex justify-content-between mb-40">
-                                    <span>news</span>
-                                    <ul><li>by<a href="#"> Jhon Guru</a></li></ul>
-                                </div>
-                                <div class="blog-cap-mid">
-                                    <p><a href="single-blog.html">5 Simple Tricks for Getting Stellar Hotel Service Wherever You Are</a></p>
-                                </div>
-                                <!-- Comments -->
-                                <div class="blog-cap-bottom d-flex justify-content-between">
-                                    <span>Feb 28, 2020</span>
-                                    <span><img src="{{ asset('frontend/assets/img/our_blog/blog-comments-icon.jpg')}}" alt="">3</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       </div>
         <!-- Blog End -->
 
         <!-- Gallery img Start-->

@@ -20,5 +20,19 @@ Route::get('/', function () {
 //Frontend
 Route::get('/','PageController@home')->name('homepage');
 
+Route::get('about','PageController@about')->name('aboutpage');
+
+Route::get('service','PageController@service')->name('servicepage');
+
+Route::get('contact','PageController@contact')->name('contactpage');
+
+
+
 //Backend
 Route::get('dashboard','BackendController@dashboardfun');
+
+Route::resource('roomtypes','RoomtypeController');
+
+Route::resource('services','ServiceController');
+
+Route::resource('rooms','RoomController');
