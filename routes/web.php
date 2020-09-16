@@ -26,13 +26,32 @@ Route::get('service','PageController@service')->name('servicepage');
 
 Route::get('contact','PageController@contact')->name('contactpage');
 
+Route::get('room','PageController@room')->name('roompage');
+
+Route::get('roomfrontend/{id}','PageController@roomfrontend')->name('roomfrontend');
+
+Route::get('roomdetail/{id}','PageController@roomdetail')->name('roomdetail');
+
+Route::get('book','PageController@book')->name('bookpage');
+
+
 
 
 //Backend
+Route::middleware('auth')->group(function () {
+
 Route::get('dashboard','BackendController@dashboardfun');
 
 Route::resource('roomtypes','RoomtypeController');
 
 Route::resource('services','ServiceController');
 
+});
+
 Route::resource('rooms','RoomController');
+
+
+Route::resource('bookings','BookingController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

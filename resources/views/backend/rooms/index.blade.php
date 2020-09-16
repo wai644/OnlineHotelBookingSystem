@@ -28,7 +28,7 @@
     				<tr>
                         <td>{{$i++}}</td>    
                         <td>{{$room->name}}</td>
-                        <td>{{$room->price}}</td>            
+                        <td>{{$room->price}} MMK</td>           
                         <td><img src="{{asset($room->photo)}}" class="rounded circle" width="150px" height="120px"></td>            
                         <td>
                             <a href="{{route('rooms.show',$room->id)}}" class="btn btn-outline-primary"><i class="fas fa-info"></i></a>

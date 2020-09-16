@@ -13,7 +13,7 @@
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-9">
                                 <div class="h1-slider-caption">
-                                    <h1 data-animation="fadeInUp" data-delay=".4s">top hotel in the city</h1>
+                                    <h1 data-animation="fadeInUp" data-delay=".4s">Welcome Our Hotel</h1>
                                     <h3 data-animation="fadeInDown" data-delay=".4s">Hotel & Resourt</h3>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-9">
                                 <div class="h1-slider-caption">
-                                    <h1 data-animation="fadeInUp" data-delay=".4s">top hotel in the city</h1>
+                                    <h1 data-animation="fadeInUp" data-delay=".4s">Welcome Our Hotel</h1>
                                     <h3 data-animation="fadeInDown" data-delay=".4s">Hotel & Resourt</h3>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-9">
                                 <div class="h1-slider-caption">
-                                    <h1 data-animation="fadeInUp" data-delay=".4s">top hotel in the city</h1>
+                                    <h1 data-animation="fadeInUp" data-delay=".4s">Welcome Our Hotel</h1>
                                     <h3 data-animation="fadeInDown" data-delay=".4s">Hotel & Resourt</h3>
                                 </div>
                             </div>
@@ -89,6 +89,10 @@
                                         <option value="">2</option>
                                         <option value="">3</option>
                                         <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
                                     </select>
                                 </div>
                             </form>
@@ -103,33 +107,20 @@
                             <form action="#">
                                 <div class="select-itms">
                                     <select name="select" id="select2">
+                                        <option value="">0</option>
                                         <option value="">1</option>
                                         <option value="">2</option>
                                         <option value="">3</option>
                                         <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
                                     </select>
                                 </div>
                             </form>
                         </div>
                    </div>
                     <!-- Single Select Box -->
-                    <div class="single-select-box mb-30">
-                        <div class="boking-tittle">
-                            <span>Rooms:</span>
-                        </div>
-                        <div class="select-this">
-                            <form action="#">
-                                <div class="select-itms">
-                                    <select name="select" id="select3">
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                   </div>
+                   
                     <!-- Single Select Box -->
                     <div class="single-select-box pt-45 mb-30">
                         <a href="#" class="btn select-btn">Book Now</a>
@@ -152,9 +143,6 @@
                         <div class="customer-img mb-120">
                             <img src="{{ asset('frontend/assets/img/customer/customar1.png')}}" class="customar-img1" alt="">
                             <img src="{{ asset('frontend/assets/img/customer/customar2.png')}}" class="customar-img2" alt="">
-                            <div class="service-experience heartbeat">
-                                <h3>25 Years of Service<br>Experience</h3>
-                            </div>
                         </div>
                    </div>
                     <div class=" col-xl-6 col-lg-6">
@@ -192,89 +180,27 @@ At Novotel Yangon Max we understand the importance of balancing your time to max
                     </div>
                 </div>
                 <div class="row">
+                     @foreach($roomtypes as $roomtype)
+ 
                     <div class="col-xl-4 col-lg-6 col-md-6">
+                       
                         <!-- Single Room -->
                         <div class="single-room mb-50">
+
+                             <a href="{{route('roomfrontend',$roomtype->id)}}" style="text-decoration: none; color: gray">
                             <div class="room-img">
-                               <a href="rooms.html"><img src="{{ asset('frontend/assets/img/rooms/room1.jpg')}}" alt=""></a>
+
+                                <img src="{{ asset($roomtype->photo)}}" class="img-fluid" width="150px" height="150px">
+                                 
                             </div>
+                             
                             <div class="room-caption">
-                                <h3><a href="rooms.html">Classic Double Bed</a></h3>
-                                <div class="per-night">
-                                    <span><u>$</u>150 <span>/ par night</span></span>
-                                </div>
+                                {{$roomtype->name}}
                             </div>
+                        </a>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <!-- Single Room -->
-                        <div class="single-room mb-50">
-                            <div class="room-img">
-                               <a href="rooms.html"><img src="{{ asset('frontend/assets/img/rooms/room2.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="room-caption">
-                                <h3><a href="rooms.html">Classic Double Bed</a></h3>
-                                <div class="per-night">
-                                    <span><u>$</u>150 <span>/ par night</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <!-- Single Room -->
-                        <div class="single-room mb-50">
-                            <div class="room-img">
-                               <a href="rooms.html"> <img src="{{ asset('frontend/assets/img/rooms/room3.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="room-caption">
-                                <h3><a href="rooms.html">Classic Double Bed</a></h3>
-                                <div class="per-night">
-                                    <span><u>$</u>150 <span>/ par night</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <!-- Single Room -->
-                        <div class="single-room mb-50">
-                            <div class="room-img">
-                                <a href="rooms.html"><img src="{{ asset('frontend/assets/img/rooms/room4.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="room-caption">
-                                <h3><a href="rooms.html">Classic Double Bed</a></h3>
-                                <div class="per-night">
-                                    <span><u>$</u>150 <span>/ par night</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <!-- Single Room -->
-                        <div class="single-room mb-50">
-                            <div class="room-img">
-                                <a href="rooms.html"><img src="{{ asset('frontend/assets/img/rooms/room5.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="room-caption">
-                                <h3><a href="rooms.html">Classic Double Bed</a></h3>
-                                <div class="per-night">
-                                    <span><u>$</u>150 <span>/ par night</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <!-- Single Room -->
-                        <div class="single-room mb-50">
-                            <div class="room-img">
-                               <a href="rooms.html"> <img src="{{ asset('frontend/assets/img/rooms/room6.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="room-caption">
-                                <h3><a href="rooms.html">Classic Double Bed</a></h3>
-                                <div class="per-night">
-                                    <span><u>$</u>150 <span>/ par night</span></span>
-                                </div>
-                            </div>
-                        </div>
+                    @endforeach
                     </div>
                 </div>
             </div>

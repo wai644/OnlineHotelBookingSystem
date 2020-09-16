@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Room;
+use App\Service;
+use App\Roomtype;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -14,6 +16,7 @@ class RoomController extends Controller
      */
     public function index()
     {
+
         $rooms=Room::all();
         return view('backend.rooms.index',compact('rooms'));
     }
@@ -25,7 +28,9 @@ class RoomController extends Controller
      */
     public function create()
     {
-        return view('backend.rooms.create');
+        $roomtypes=Roomtype::all();        
+        $services=Service::all();
+        return view('backend.rooms.create',compact('services','roomtypes'));
     }
 
     /**
@@ -40,7 +45,7 @@ class RoomController extends Controller
         "name" => 'required',
         "price" => 'required',
         "photo" => 'required',
-        "people" => 'required',
+        "description" => 'required',
         "roomtype" => 'required'
     ]);
 
@@ -54,12 +59,13 @@ class RoomController extends Controller
     $room = new Room;
     // col name from database
     $room->name = $request->name;
-    $room->photo = $path;
     $room->price = $request->price;
-    $room->people = $request->people;
+    $room->photo = $path;
+    $room->description = $request->description;
     $room->roomtype_id = $request->roomtype;
     $room->save();
-
+    $room->services()->attach(request('service'));
+   
     // redirect
     return redirect()->route('rooms.index');
     }
@@ -70,9 +76,11 @@ class RoomController extends Controller
      * @param  \App\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function show(Room $room)
+    public function show($id)
     {
-        //
+         $room = Room::findOrFail($id);
+        
+        return view('backend.rooms.show',compact('room'));
     }
 
     /**
@@ -81,9 +89,14 @@ class RoomController extends Controller
      * @param  \App\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function edit(Room $room)
+    public function edit($id)
     {
-        //
+        //dd($room);
+        $services=Service::all();
+        $room=Room::find($id);
+        $roomtypes=Roomtype::all();
+
+         return view('backend.rooms.edit',compact('room','services','roomtypes'));
     }
 
     /**
@@ -95,14 +108,16 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
+        //dd($request);
          $request->validate([
-            "name" => 'required',
-            "price" => 'required',
-            "photo" => 'sometimes',
-            "oldphoto" => 'required',
-            "people" => 'required',
+            'name' => 'required',
+            'price' => 'required',
+            'photo' => 'sometimes',
+            'oldphoto' => 'required',
+            'description' => 'required',
             "roomtype" => 'required'
         ]);
+
 
         // file upload, if data
         if ($request->hasFile('photo')) {
@@ -117,11 +132,12 @@ class RoomController extends Controller
 
         // data update
         $room->name = $request->name;
-        $room->photo = $path;
         $room->price = $request->price;
-        $room->people = $request->people;
-        $room->roomtype_id = $request->roomtype_id;
+        $room->photo = $path;     
+        $room->description = $request->description;
+        $room->roomtype_id = $request->roomtype;
         $room->save();
+        $room->services()->sync(request('service'));
 
         // redirect
         return redirect()->route('rooms.index');
@@ -135,6 +151,7 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+         $room->delete();
+        return redirect()->route('rooms.index');
     }
 }

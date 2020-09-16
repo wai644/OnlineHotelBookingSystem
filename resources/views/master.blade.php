@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
    <link href="{{ asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
+   <link href="{{ asset('select/css/select2.min.css')}}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -391,7 +392,8 @@
   <script src="{{ asset('backend/js/demo/chart-area-demo.js')}}"></script>
   <script src="{{ asset('backend/js/demo/chart-pie-demo.js')}}"></script>
   <script src="{{ asset('backend/js/custom.js')}}"></script>
-
+  <script src="{{ asset('select/js/select2.min.js')}}"></script>
+@yield('script')
 </body>
 
 </html>

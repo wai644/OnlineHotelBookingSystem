@@ -8,11 +8,9 @@ class Service extends Model
 {
     protected $fillable=['name','photo'];
 
-     public function rooms()
-    {
-    	return $this->belongsToMany('App\Room','booking_detail')
-    				->withPivot('qty')
-    				->withTimestamps();
-    }
+     public function rooms($value='')
+  {
+    return $this->belongsToMany('App\Service');
+  }
 
 }

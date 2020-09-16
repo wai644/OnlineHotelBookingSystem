@@ -33,6 +33,18 @@
 			        </div>
 			      </div>
 
+			      {{-- <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <select name="room" class="form-control">
+          @foreach($rooms as $row)
+<option value="{{$row->id}}" @if($room->roomtype_id == $row->id){{'selected'}} @endif>{{$row->name}}
+					   	</option>
+          @endforeach
+        </select>
+      </div>
+    </div> --}}
+
 			      <div class="form-group row">
 			        <div class="col-sm-5">
 			          <input type="submit" class="btn btn-primary" name="btnsubmit" value="Create">

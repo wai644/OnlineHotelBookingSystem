@@ -14,7 +14,7 @@ class Room extends Model
   }
   public function services($value='')
   {
-    return $this->hasMany('App\Service');
+    return $this->belongsToMany('App\Service');
   }
   public function booking($value='')
   {

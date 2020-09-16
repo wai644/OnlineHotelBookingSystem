@@ -10,6 +10,11 @@
         <link rel="manifest" href="{{ asset('frontend/site.webmanifest')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/img/favicon.ico')}}">
 
+     <!-- iconfont CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/icon/icofont/icofont.min.css')}}">
+  <!-- Boxicon CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/icon/boxicons-master/css/boxicons.min.css')}}">
+
     <!-- CSS here -->
             <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css')}}">
             <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css')}}">
@@ -49,7 +54,7 @@
                         <!-- logo -->
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                               <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                               <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/logo.png')}}" alt=""></a>
                             </div>
                         </div>
                     <div class="col-xl-8 col-lg-8">
@@ -63,11 +68,16 @@
                                         </li>
                                         <li><a href="#">Pages</a>
                                             <ul class="submenu">
-                                                <li><a href="rooms.html">Rooms</a>
-                                                <li><a href="elements.html">Element</a></li>
+                                                <li><a href="{{route('roompage')}}">Room</a>
                                             </ul>
                                         </li>
                                         <li><a href="{{route('contactpage')}}">Contact</a></li>
+                                        <a href="{{route('bookpage')}}"> 
+          <i class="icofont-shopping-cart"></i>
+         <sup> <span class="badge badge-pill badge-light badge-notify cartNotistyle cartNoti cartnoti"></span></sup>
+            <span class="total">
+            </span> Ks
+        </a>
                                     </ul>
                                 </nav>
                             </div>
@@ -95,13 +105,13 @@
                       <div class="single-footer-caption mb-30">
                          <!-- logo -->
                          <div class="footer-logo">
-                           <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                           <a href="index.html"><img src="{{ asset('frontendassets/img/logo/logo2_footer.png')}}" alt=""></a>
                          </div>
                          <div class="footer-social footer-social2">
-                             <a href="#"><i class="fab fa-facebook-f"></i></a>
-                             <a href="#"><i class="fab fa-twitter"></i></a>
+                             <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                             <a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
                              <a href="#"><i class="fas fa-globe"></i></a>
-                             <a href="#"><i class="fab fa-behance"></i></a>
+                             <a href="http://www.instagram.com"><i class="icofont-instagram" id="icon"></i></a>
                          </div>
                          <div class="footer-pera">
                               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -128,7 +138,7 @@
                            <div class="footer-tittle">
                                <h4>Reservations</h4>
                                <ul>
-                                   <li><a href="#">Tel: 345 5667 889</a></li>
+                                   <li><a href="#">Tel:  +95 (9) 251186014</a></li>
                                    <li><a href="#">Skype: Marianabooking</a></li>
                                    <li><a href="#">reservations@hotelriver.com</a></li>
                                </ul>
@@ -140,7 +150,7 @@
                            <div class="footer-tittle">
                                <h4>Our Location</h4>
                                <ul>
-                                   <li><a href="#">198 West 21th Street,</a></li>
+                                   <li><a href="#">459 Pyay Road, Kamayut Township, Yangon, Myanmar</a></li>
                                    <li><a href="#">Suite 721 New York NY 10016</a></li>
                                </ul>
                                <!-- Form -->
@@ -201,10 +211,12 @@
         <script src="{{ asset('frontend/assets/js/jquery.validate.min.js')}}"></script>
         <script src="{{ asset('frontend/assets/js/mail-script.js')}}"></script>
         <script src="{{ asset('frontend/assets/js/jquery.ajaxchimp.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('frontend/assets/js/custom.js')}}"></script>
         
     <!-- Jquery Plugins, main Jquery -->  
         <script src="{{ asset('frontend/assets/js/plugins.js')}}"></script>
         <script src="{{ asset('frontend/assets/js/main.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/localstorage_custom.js')}}"></script>
         
     </body>
 </html>

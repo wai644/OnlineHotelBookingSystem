@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    protected $fillable=['checkin','checkout','adult','children','user_id','rooom_id'];
+    protected $fillable=['checkin','checkout','adult','children','note','total','user_id',];
 
     public function rooms($value='')
   {
