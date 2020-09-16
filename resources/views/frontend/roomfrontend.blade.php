@@ -54,7 +54,7 @@
                                 </div>
                                 <a class="addtocartBtn btn text-center text-decoration-none colsm-2 mt-2 mr-2 ml-3" style="height: 20px;" data-id="{{$room->id}}" data-name="{{$room->name}}" data-photo="{{$room->photo}}" data-price="{{$room->price}}">Book</a>
 
-                                <a href="{{route('roomdetail',$room->id)}}" class="addtocartBtn btn text-center text-decoration-none colsm-2 mt-2 ml-3" style="height: 20px;">Detail</a>
+                                <a href="{{route('roomdetail',$room->id)}}" class="btn text-center text-decoration-none colsm-2 mt-2 ml-3" style="height: 20px;">Detail</a>
                             </div>
 
                     </div>
