@@ -36,7 +36,8 @@ class PageController extends Controller
 
   public function room($value='')
   {
-    return view('frontend.room');
+    $rooms=Room::all();
+    return view('frontend.room',compact('rooms'));
   }
 
   public function roomfrontend($id)
@@ -58,6 +59,16 @@ class PageController extends Controller
           
           $rooms=Room::all();
       return view('frontend.book',compact('rooms',));
+     }
+
+      public function loginfun($value='')
+     {
+      return view('frontend.login');
+     }
+
+     public function registerfun($value='')
+     {
+      return view('frontend.register');
      }
 
 

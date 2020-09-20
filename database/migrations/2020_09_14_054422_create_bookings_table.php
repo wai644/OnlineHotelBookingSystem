@@ -21,6 +21,7 @@ class CreateBookingsTable extends Migration
             $table->string('children');
             $table->string('total');
             $table->string('note');
+            $table->tinyInteger('status')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

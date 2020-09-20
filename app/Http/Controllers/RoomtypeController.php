@@ -61,9 +61,11 @@ class RoomtypeController extends Controller
      * @param  \App\Roomtype  $roomtype
      * @return \Illuminate\Http\Response
      */
-    public function show(Roomtype $roomtype)
+    public function show($id)
     {
-        //
+         $roomtype = Roomtype::findOrFail($id);
+        
+        return view('backend.roomtypes.show',compact('roomtype'));
     }
 
     /**

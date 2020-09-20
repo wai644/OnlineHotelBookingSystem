@@ -3,6 +3,13 @@ $(document).ready(function(){
 	showMyItem();
     cartnoti();
 
+    $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+	});
+
+
 
 	$('.addtocartBtn').click(function(){
 		//alert('ok');
@@ -122,21 +129,24 @@ $(document).ready(function(){
 
 	$('.book_now').on('click',function(){
 		//alert('ok');
-		var notes = $('.notes').val();
-		
-		//console.log(notes);
-		var itemString = localStorage.getItem('items');
+		var checkin=$('.checkin').val();
+		var checkout=$('.checkout').val();
+		var adult=$('.adult').val();
+		var child=$('.child').val();
+		var notes=$('.notes').val();
+		console.log(checkin,checkout,adult,child,notes);
+
+		var itemString=localStorage.getItem('items');
 		if(itemString){
-			$.post('/bookings',{shop_data:itemString,notes:notes},function(response){
-				if(response){
-				alert(response);
-					localStorage.clear();
-					showMyItem();
-					location.href="/";
-				}
-			})
+			 $.post('/books',{room_data:itemString,checkin:checkin,checkout:checkout,adult:adult,child:child,notes:notes},function (response){
+			 	if(response){
+			 		alert(response);
+			 		localStorage.clear();
+			 		showMyItem();
+			 		location.href=("/");
+			 	}
+			 })
 		}
-	
 	})
 
 
@@ -178,7 +188,7 @@ $(document).ready(function(){
 					<td><img src="${photo}"  width="90" height ="60"></td>
 					<td>${price}</td>
 					<td>
-						<a class="btn btn-sm btn-danger minus col-sm-2" style="width:30px" height="20px" data-id="${id}" data-qty="${qty}">
+						<a class="btn btn-sm btn-danger minus col-sm-2" data-id="${id}" data-qty="${qty}">
 						-</a>
 						${qty}
 						<a class="btn btn-sm btn-danger pluse" data-id="${id}" data-qty="${qty}">
@@ -198,3 +208,5 @@ $(document).ready(function(){
 		}
 
 });
+
+

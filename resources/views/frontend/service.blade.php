@@ -21,8 +21,7 @@
         <!-- slider Area End-->
 
         <!-- Dining Start -->
-        <div class="row">
-       <section class="room-area">
+       <section class="room-area mt-4">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8">
@@ -61,30 +60,10 @@
             </div>
 
         </section>
-        </div>
                             <!-- Single Testimonial -->
         <!-- Testimonial End -->
 
         <!-- Gallery img Start-->
-        <div class="gallery-area fix">
-            <div class="container-fluid p-0">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="gallery-active owl-carousel">
-                            <div class="gallery-img">
-                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/gallery1.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="gallery-img">
-                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/gallery2.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="gallery-img">
-                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/gallery3.jpg')}}" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Gallery img End-->
     </main>
 @endsection

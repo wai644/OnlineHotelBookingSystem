@@ -62,14 +62,14 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
-                                <h3>Buttonwood, California.</h3>
-                                <p>Rosemead, CA 91770</p>
+                                <h3>Kamayut Township, Yangon, Myanmar</h3>
+                                <p>459 Pyay Road</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>+1 253 565 2365</h3>
+                                <h3>Tel: +95 (1) 2305858</h3>
                                 <p>Mon to Fri 9am to 6pm</p>
                             </div>
                         </div>
@@ -84,5 +84,13 @@
                 </div>
             </div>
         </section>
+
+         <div class="gallery-area g-padding fix">
+            <div class="container-fluid p-0">
+                        <div class="map_responsive ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23561.21814738914!2d96.12494457194065!3d16.807007685996354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x415652183cd73011!2sNovotel%20Yangon%20Max!5e0!3m2!1sen!2smm!4v1600437794484!5m2!1sen!2smm" width="1250" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
         @endsection
     <!-- ================ contact section end ================= -->

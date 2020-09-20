@@ -2,7 +2,8 @@
 
 @section('content')
 
-
+<main>
+    
     <div class="slider-area">
             <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/roomspage_hero.jpg')}}">
                 <div class="container">
@@ -17,7 +18,41 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-3 ">
 
+
+              <label for="inputPassword5">Checkin</label>
+              <input type="date" id="inputPassword5" class="form-control checkin" aria-describedby="passwordHelpBlock">
+              </div>
+
+               <div class="col-md-3">
+
+
+              <label for="inputPassword5">Checkout</label>
+              <input type="date" id="inputPassword5" class="form-control checkout" aria-describedby="passwordHelpBlock">
+              </div>
+
+               <div class="col-md-3">
+
+
+              <label for="inputPassword5">Adult</label>
+              <input type="number" id="inputPassword5" class="form-control adult" aria-describedby="passwordHelpBlock">
+              </div>
+
+               <div class="col-md-3">
+
+
+              <label for="inputPassword5">Children</label>
+              <input type="number" id="inputPassword5" class="form-control child" aria-describedby="passwordHelpBlock">
+              </div>
+
+          </div>
+
+
+           <div class="row mt-3 shoppingcart_div">
+            <div class="table-responsive">
                 <table class="table text-center">
                     <thead>
                         <tr>
@@ -25,7 +60,7 @@
                             <th> Name </th>
                             <th> Photo </th>
                             <th> Price </th>
-                            <th>Qty</th>
+                            <th> Stay </th>
                             <th> Total</th>
                             <th> Action</th>
                         </tr>
@@ -35,33 +70,54 @@
 
                     </tbody>
                     <tfoot id="shoppingcart_tfoot" class="text-right">
+
+                   
+                       
                         <tr>
-                            <td colspan="6"><h3>Total</h3></td>
-                            <td class=" text-center"> <h3 class="total"></h3></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="row">
+                                <h3 class="">Total :&nbsp;</h3>
+                                <h3 class="total"></h3>
+                                <h3>&nbsp;Ks</h3>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
+                        
                             <td colspan="5">
-                                <textarea class="form-control notes" placeholder="Any Request..." ></textarea>
+                                <textarea class="form-control notes" placeholder="Please write your requests..." ></textarea>
+                                
                             </td>
+                            
                             <td colspan="3">
                                 @role('Customer')
                                 <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn book_now"> 
-                                    Check Out 
+                                    Book 
                                 </button>
                                 @else
-                                <a  href="" class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now">
+                                <a  href="{{ route('login') }}" class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn book_now">
                                     Please Login
                                 </a>
                                 @endrole
-                            </
+                    
                             </td>
+                        
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+        </div>
+         </div>
+       
     
         <!-- Gallery img End-->
-    </main>
-
+</main>
         @endsection
     
     

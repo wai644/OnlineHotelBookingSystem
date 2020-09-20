@@ -28,19 +28,20 @@
                         <div class="customer-img mb-120">
                             <img src="{{ asset('frontend/assets/img/customer/customar1.png')}}" class="customar-img1" alt="">
                             <img src="{{ asset('frontend/assets/img/customer/customar2.png')}}" class="customar-img2" alt="">
-                            <div class="service-experience heartbeat">
-                                <h3>25 Years of Service<br>Experience</h3>
-                            </div>
                         </div>
                    </div>
-                    <div class=" col-xl-4 col-lg-4">
+                    <div class=" col-xl-6 col-lg-6">
                         <div class="customer-caption">
-                            <span>About our company</span>
-                            <h2>Make the customer the hero of your story</h2>
-                            <div class="caption-details">
-                                <p class="pera-dtails">Lorem ipsum dolor sit amet, consectetur adipisic- ing elit, sed do eiusmod tempor inc. </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
-                                <a href="#" class="btn more-btn1">Learn More <i class="ti-angle-right"></i> </a>
+                            <h2 style="text-align: center">About our hotel</h2>
+                            <p style="text-align: center;"><h4>Your welcoming sanctuary in the heart of Yangon</h4></p>
+                            
+                                <p><h4>Take time and make time…Feel relaxed, rejuvenated and entirely at home when you stay with us at the Novotel Yangon Max!</h4></p>
+<p><h4>
+Just 20 minutes from the Yangon International Airport (RGN) on Pyay Road, Accor’s five-star Novotel Yangon Max is ideally located within a 10-kilometre radius of most embassies and international organizations, only four kilometres from the sacred Shwedagon Pagoda, close to the historical city centre, and a mere stroll from Junction Square shopping centre.</h4></p>
+<p><h4>
+At Novotel Yangon Max we understand the importance of balancing your time to maximise your stay. Whether you’re travelling for business or leisure, our wide selection of recreational facilities, mouth-watering Asian and international cuisine, stylish and comfortable rooms and state-of-the-art business and conference services will ensure this peaceful oasis is your ideal choice for a relaxing, rewarding and energizing experience in the heart of Myanmar’s largest city.</h4>
+ </p>
+                    
                             </div>
                         </div>
                     </div>
@@ -51,125 +52,13 @@
 
 
         <!-- Gallery img Start-->
-        <div class="gallery-area g-padding fix">
-            <div class="container-fluid p-0">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="gallery-active owl-carousel">
-                            <div class="gallery-img">
-                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/gallery1.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="gallery-img">
-                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/gallery2.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="gallery-img">
-                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/gallery3.jpg')}}" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Gallery img End-->
 
         <!-- Dining Start -->
-        <div class="dining-area d-padding">
-            <!-- Single Left img -->
-            <div class="single-dining-area left-img">
-                <div class="container">
-                    <div class="row justify-content-end">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="dining-caption">
-                                <span>Our resturent</span>
-                                <h3>Dining & Drinks</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud.</p>
-                                <a href="#" class="btn border-btn">Learn More <i class="ti-angle-right"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <!-- single Right img -->
-            <div class="single-dining-area right-img">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="dining-caption text-right">
-                                <span>Our Pool</span>
-                                <h3>Swimming Pool</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud.</p>
-                                <a href="#" class="btn border-btn">Learn More  <i class="ti-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
         <!-- Dining End -->
 
         <!-- Testimonial Start -->
-        <div class="testimonial-area t-padding">
-            <div class="container">
-               <div class="row justify-content-center">
-                    <div class="col-xl-9 col-lg-9 col-md-9">
-                        <div class="h1-testimonial-active">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial pt-65">
-                                <!-- Testimonial tittle -->
-                                <div class="font-back-tittle mb-105">
-                                    <div class="archivment-front">
-                                        <img src="assets/img/logo/testimonial.png" alt="">
-                                    </div>
-                                    <h3 class="archivment-back">Testimonial</h3>
-                                </div>
-                                 <!-- Testimonial Content -->
-                                <div class="testimonial-caption text-center">
-                                    <p>Yorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-                                    </p>
-                                    <!-- Rattion -->
-                                    <div class="testimonial-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="rattiong-caption">
-                                        <span>Clifford Frazier, <span>Regular Client</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial  pt-65">
-                                <!-- Testimonial tittle -->
-                                <div class="font-back-tittle mb-105">
-                                    <div class="archivment-front">
-                                        <img src="assets/img/logo/testimonial.png" alt="">
-                                    </div>
-                                    <h3 class="archivment-back">Testimonial</h3>
-                                </div>
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption text-center">
-                                    <p>Yorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-                                    </p>
-                                    <!-- Rattion -->
-                                    <div class="testimonial-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="rattiong-caption">
-                                        <span>Clifford Frazier, <span>Regular Client</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-        </div>
+       
         <!-- Testimonial End -->
 
     </main>

@@ -34,11 +34,18 @@ Route::get('roomdetail/{id}','PageController@roomdetail')->name('roomdetail');
 
 Route::get('book','PageController@book')->name('bookpage');
 
+Route::post('search', 'PageController@search');
 
 
+
+
+
+
+
+Route::resource('books','BookingController');
 
 //Backend
-Route::middleware('auth')->group(function () {
+Route::middleware('role:Admin')->group(function () {
 
 Route::get('dashboard','BackendController@dashboardfun');
 
@@ -46,12 +53,13 @@ Route::resource('roomtypes','RoomtypeController');
 
 Route::resource('services','ServiceController');
 
-});
-
 Route::resource('rooms','RoomController');
 
 
-Route::resource('bookings','BookingController');
+
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

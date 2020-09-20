@@ -1,17 +1,32 @@
-@extends('layouts.app')
+@extends('frontendtemplate')
 
 @section('content')
-<div class="container">
+
+<div class="slider-area">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/roomspage_hero.jpg')}}">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
+                            <div class="hero-caption">
+                                <span>Login</span>
+                                <h2>Login</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="container ">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+        <div class="col-md-8 mb-5 mt-5">
+            <div class="">
+                {{-- <div class="row justify-content-center">{{ __('Login') }}</div> --}}
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row mt-2">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">

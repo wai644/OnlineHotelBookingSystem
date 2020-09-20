@@ -21,7 +21,7 @@
         <!-- slider Area End-->
 
         <!-- Room Start -->
-        <section class="room-area r-padding1">
+        <section class="room-area mt-4">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8">

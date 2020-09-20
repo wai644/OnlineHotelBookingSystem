@@ -2,8 +2,9 @@
 <html class="no-js" lang="zxx">
     <head>
         <meta charset="utf-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Hotel</title>
+        <title>Hotel Booking</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,7 +39,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <strong>Hotel</b>
+                    <strong>Welcome</b>
                 </div>
             </div>
         </div>
@@ -57,7 +58,7 @@
                                <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/logo.png')}}" alt=""></a>
                             </div>
                         </div>
-                    <div class="col-xl-8 col-lg-8">
+                    <div class="col-xl-10 col-lg-10">
                             <!-- main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
@@ -68,27 +69,56 @@
                                         </li>
                                         <li><a href="#">Pages</a>
                                             <ul class="submenu">
-                                                <li><a href="{{route('roompage')}}">Room</a>
+                                                <li><a href="{{route('roompage')}}">Room Photo</a>
                                             </ul>
                                         </li>
                                         <li><a href="{{route('contactpage')}}">Contact</a></li>
-                                        <a href="{{route('bookpage')}}"> 
-          <i class="icofont-shopping-cart"></i>
+                                        
+
+         <a href="{{route('bookpage')}}"> 
+         Book</i>
          <sup> <span class="badge badge-pill badge-light badge-notify cartNotistyle cartNoti cartnoti"></span></sup>
-            <span class="total">
-            </span> Ks
         </a>
+        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                                     </ul>
                                 </nav>
                             </div>
                         </div>             
-                        <div class="col-xl-2 col-lg-2">
-                            <!-- header-btn -->
-                        </div>
+                        {{-- <div class="col-xl-2 col-lg-2">
+                            < header-btn
+                            <! header-btn >
+                            <div class="header-btn">
+                                <a href="#" class="btn btn1 d-none d-lg-block ">Book Online</a>
+                            </div>
+                        </div> --}}
                         <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -125,10 +155,9 @@
                            <div class="footer-tittle">
                                <h4>Quick Links</h4>
                                <ul>
-                                   <li><a href="#">About Mariana</a></li>
-                                   <li><a href="#">Our Best Rooms</a></li>
-                                   <li><a href="#">Our Photo Gellary</a></li>
-                                   <li><a href="#">Pool Service</a></li>
+                                   <li><a href="about">About Mariana</a></li>
+                                   <li><a href="room">Our Photo Gellary</a></li>
+                                   <li><a href="service">Service</a></li>
                                </ul>
                            </div>
                        </div>
@@ -140,7 +169,7 @@
                                <ul>
                                    <li><a href="#">Tel:  +95 (9) 251186014</a></li>
                                    <li><a href="#">Skype: Marianabooking</a></li>
-                                   <li><a href="#">reservations@hotelriver.com</a></li>
+                                   <li><a href="#">Email: H9045-RE@accor.com</a></li>
                                </ul>
                            </div>
                        </div>
@@ -151,7 +180,7 @@
                                <h4>Our Location</h4>
                                <ul>
                                    <li><a href="#">459 Pyay Road, Kamayut Township, Yangon, Myanmar</a></li>
-                                   <li><a href="#">Suite 721 New York NY 10016</a></li>
+                                   <li><a href="#">Email: H9045-RE@accor.com</a></li>
                                </ul>
                                <!-- Form -->
                                 <div class="footer-form" >
