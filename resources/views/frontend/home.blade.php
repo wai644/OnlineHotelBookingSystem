@@ -5,7 +5,7 @@
 <main>
 
         <!-- slider Area Start-->
-        <div class="slider-area ">
+        <div class="slider-area mb-1">
             <!-- Mobile Menu -->
             <div class="slider-active dot-style">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/h1_hero.jpg')}}" >
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/h1_hero.jpg')}}" >
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/big_image_1.jpg')}}" >
                     <div class="container">
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-9">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/h1_hero.jpg')}}">
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="{{ asset('frontend/assets/img/hero/servicespage_hero.jpg')}}">
                     <div class="container">
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-9">
@@ -49,94 +49,10 @@
         <!-- slider Area End-->
 
         <!-- Booking Room Start-->
-        <div class="booking-area">
-            <div class="container">
-               <div class="row ">
-               <div class="col-12">
-                <form action="">
-                <div class="booking-wrap d-flex justify-content-between align-items-center">
-                 
-                    <!-- select in date -->
-                    <div class="single-select-box mb-30">
-                        <!-- select out date -->
-                        <div class="boking-tittle">
-                            <span> Check In Date:</span>
-                        </div>
-                        <div class="boking-datepicker">
-                           <input id="datepicker1" class="start" placeholder="10/12/2020" />
-                        </div>
-                   </div>
-                    <!-- Single Select Box -->
-                    <div class="single-select-box mb-30">
-                        <!-- select out date -->
-                        <div class="boking-tittle">
-                            <span>Check OutDate:</span>
-                        </div>
-                        <div class="boking-datepicker">
-                            <input id="datepicker2" class="end" placeholder="12/12/2020" />
-                        </div>
-                   </div>
-                    <!-- Single Select Box -->
-                    <div class="single-select-box mb-30">
-                        <div class="boking-tittle">
-                            <span>Adults:</span>
-                        </div>
-                        <div class="select-this">
-                            <form action="">
-                                <div class="select-itms adult">
-                                    <select name="select" id="select1" >
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
-                                        <option value="">7</option>
-                                        <option value="">8</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                   </div>
-                    <!-- Single Select Box -->
-                    <div class="single-select-box mb-30">
-                        <div class="boking-tittle">
-                            <span>Children:</span>
-                        </div>
-                        <div class="select-this">
-                            <form action="">
-                                <div class="select-itms child">
-                                    <select name="select" id="select2" >
-                                        <option value="">0</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                   </div>
-                    <!-- Single Select Box -->
-                   
-                    <!-- Single Select Box -->
-                    
-                    <div class="single-select-box pt-45 mb-30">
-                        <a class="book btn checkoutbtn">Book Room</a>
-                   </div>
-                 
-                </div>
-               </div>
-               </div>
-            </div>
-        </div>
-        </form>
         <!-- Booking Room End-->
 
         <!-- Make customer Start-->
-        <section class="make-customer-area customar-padding fix mt-1">
+        <section class="make-customer-area customar-padding fix">
             <div class="container-fluid p-0">
                 <div class="row">
                    <div class="col-xl-5 col-lg-6">

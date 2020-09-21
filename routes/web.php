@@ -34,7 +34,7 @@ Route::get('roomdetail/{id}','PageController@roomdetail')->name('roomdetail');
 
 Route::get('book','PageController@book')->name('bookpage');
 
-Route::post('search', 'PageController@search');
+Route::get('history/{id}', 'PageController@history');
 
 
 

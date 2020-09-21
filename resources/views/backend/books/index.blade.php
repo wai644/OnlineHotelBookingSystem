@@ -79,6 +79,7 @@
                   <a href="{{route('books.show',$row->id)}}" class="btn btn-success">
                     <i class="fas fa-info"></i>
                   </a>
+                  <a href="{{route('books.edit',$row->id)}}" class="btn btn-warning">Confirmed</a>
 
                   
                   

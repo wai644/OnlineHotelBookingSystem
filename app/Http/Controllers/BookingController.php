@@ -13,7 +13,7 @@ class BookingController extends Controller
     public function __construct($value='')
     {
         $this->middleware('role:Admin')->only('index','show');
-        $this->middleware('role:Customer')->only('store');
+        $this->middleware('role:Customer')->only('store','history');
     }
     /**
      * Display a listing of the resource.
@@ -54,21 +54,26 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $roomArr = json_decode($request->room_data);
-        //dd($roomArr);
+        //var_dump($roomArr);
         $total = 0 ;
         foreach ($roomArr as $row){
-            $total+=($row->price * $row->qty);
+            $total+=($row->price * $row->date);
+            $checkin=$row->checkindate;
+            $checkout=$row->checkoutdate;
+
         }
 
         $booking = new Booking;
-        $booking->checkin=$request->checkin;
-        $booking->checkout=$request->checkout;
+        $booking->checkin=$checkin;
+        $booking->checkout=$checkout;
         $booking->adult=$request->adult;
         $booking->children=$request->child;
         $booking->user_id=Auth::id();
         $booking->note = $request->notes;
         $booking->total = $total;
+        $booking->status=0;
         $booking->save();
 
         foreach ($roomArr as $row) {
@@ -76,7 +81,6 @@ class BookingController extends Controller
         }
 
         return 'successfully';
-
     }
 
     /**
@@ -97,9 +101,12 @@ class BookingController extends Controller
      * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function edit(Booking $booking)
+    public function edit($id)
     {
-        //
+        $bookings=Booking::all();
+        $booking=Booking::find($id);
+
+         return view('backend.books.edit',compact('booking','bookings'));
     }
 
     /**
@@ -109,9 +116,20 @@ class BookingController extends Controller
      * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Booking $booking)
+    public function update(Request $request, $id)
     {
-        //
+       /*$request->validate([
+            "" => ""
+
+        ]);
+       $booking->status=$request->status;
+       $booking->save();*/
+       $booking=Booking::find($id);
+        $booking->status =1;
+        $booking->save();
+
+
+        return redirect()->route('books.index');
     }
 
     /**

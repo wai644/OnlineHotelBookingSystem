@@ -30,7 +30,9 @@
             @endphp
             @foreach($booking->rooms as $room)
             @php
-            $subtotal=$room->price*$room->pivot->qty;
+            /*$subtotal=$room->price*$room->pivot->qty;
+            $total+=$subtotal*/
+            $subtotal=($room->price * $room->pivot->date);
             $total+=$subtotal
             @endphp
             <tr>

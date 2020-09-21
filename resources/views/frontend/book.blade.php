@@ -23,18 +23,7 @@
                 <div class="col-md-3 ">
 
 
-              <label for="inputPassword5">Checkin</label>
-              <input type="date" id="inputPassword5" class="form-control checkin" aria-describedby="passwordHelpBlock">
-              </div>
-
-               <div class="col-md-3">
-
-
-              <label for="inputPassword5">Checkout</label>
-              <input type="date" id="inputPassword5" class="form-control checkout" aria-describedby="passwordHelpBlock">
-              </div>
-
-               <div class="col-md-3">
+              
 
 
               <label for="inputPassword5">Adult</label>

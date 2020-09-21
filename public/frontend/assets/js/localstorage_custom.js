@@ -18,15 +18,32 @@ $(document).ready(function(){
 		var name = $(this).data('name');
 		var photo=$(this).data('photo');
 		var price=$(this).data('price');
-		//console.log(id,name,photo,price);
 
+		var checkindate=$('.checkindate').val();
+		var checkoutdate=$('.checkoutdate').val();
+
+		var start = new Date(checkindate);
+		var end = new Date(checkoutdate);
+
+		if(start>end){
+			alert('please! Select a date again...  ')
+		}else{
+		//console.log(start);
+		var diff =(end - start);
+		var betweendate = (diff/(1000 * 60 * 60 * 24));
+		var date = Math.round(betweendate);
+		//console.log(date);
+		}
 		var item = {
 			id:id,
 			name:name,
 			photo:photo,
 			price:price,
-			qty:1
+			checkindate:checkindate,
+			checkoutdate:checkoutdate,
+			date:date
 		}
+		//console.log(item);
 
 		var itemString = localStorage.getItem("items");
 		var itemArray ;
@@ -36,71 +53,72 @@ $(document).ready(function(){
 		}else{
 			itemArray = JSON.parse(itemString);
 		}
-		var status = false;
+		// var status = false;
 
-		$.each(itemArray,function(i,v){
-			if (id==v.id){
-				status = true;
-				v.qty++;
-			}
-		})
-		if(!status){
-			itemArray.push(item);
-		}
+		// $.each(itemArray,function(i,v){
+		// 	if (id==v.id){
+		// 		status = true;
+		// 		v.qty++;
+		// 	}
+		// })
+		// if(!status){
+		// 	itemArray.push(item);
+		// }
+		itemArray.push(item);
 		var itemData = JSON.stringify(itemArray);
 		localStorage.setItem('items',itemData);
 		showMyItem();
 		cartnoti();
   });
 
-	$('#tbody').on('click','.pluse',function(){
-		//alert('ok');
-		var id = $(this).data('id');
-		var qty = $(this).data('qty');
-		//console.log(qty);
+	// $('#tbody').on('click','.pluse',function(){
+	// 	//alert('ok');
+	// 	var id = $(this).data('id');
+	// 	var qty = $(this).data('qty');
+	// 	//console.log(qty);
 
-		var itemString = localStorage.getItem('items');
-		if (itemString){
-			var itemArray = JSON.parse(itemString);
-			$.each(itemArray, function(i,v){
-			 		if(id==v.id)
-			 			v.qty++;
+	// 	var itemString = localStorage.getItem('items');
+	// 	if (itemString){
+	// 		var itemArray = JSON.parse(itemString);
+	// 		$.each(itemArray, function(i,v){
+	// 		 		if(id==v.id)
+	// 		 			v.qty++;
 
-			})
-			var itemData = JSON.stringify(itemArray);
-			localStorage.setItem("items",itemData);
-			showMyItem();
-		}
+	// 		})
+	// 		var itemData = JSON.stringify(itemArray);
+	// 		localStorage.setItem("items",itemData);
+	// 		showMyItem();
+	// 	}
 		
-	})
+	// })
 
-	$('#tbody').on('click','.minus',function(){
-		//alert('ok');
-		var id = $(this).data('id');
+	// $('#tbody').on('click','.minus',function(){
+	// 	//alert('ok');
+	// 	var id = $(this).data('id');
 		
-		var itemString = localStorage.getItem('items');
-		if (itemString){
-			var itemArray = JSON.parse(itemString);
-			$.each(itemArray, function(i,v){
-			 		if(v){
-			 			if(v.id==id){
-			 				if(v.qty==1){
-			 					var ans=confirm('Are you sure to delete?');
-			 					if(ans){
-			 						itemArray.splice(i,1);
-			 					}
-			 				}else{
-			 					v.qty--;
-			 				}
-			 			}
-			 		}
+	// 	var itemString = localStorage.getItem('items');
+	// 	if (itemString){
+	// 		var itemArray = JSON.parse(itemString);
+	// 		$.each(itemArray, function(i,v){
+	// 		 		if(v){
+	// 		 			if(v.id==id){
+	// 		 				if(v.qty==1){
+	// 		 					var ans=confirm('Are you sure to delete?');
+	// 		 					if(ans){
+	// 		 						itemArray.splice(i,1);
+	// 		 					}
+	// 		 				}else{
+	// 		 					v.qty--;
+	// 		 				}
+	// 		 			}
+	// 		 		}
 
-			})
-			var itemData = JSON.stringify(itemArray);
-			localStorage.setItem("items",itemData);
-			showMyItem();
-		}
-	})
+	// 		})
+	// 		var itemData = JSON.stringify(itemArray);
+	// 		localStorage.setItem("items",itemData);
+	// 		showMyItem();
+	// 	}
+	// })
 
 	$('#tbody').on('click','.remove',function(){
 		//alert('ok');
@@ -129,16 +147,16 @@ $(document).ready(function(){
 
 	$('.book_now').on('click',function(){
 		//alert('ok');
-		var checkin=$('.checkin').val();
-		var checkout=$('.checkout').val();
+		
 		var adult=$('.adult').val();
 		var child=$('.child').val();
 		var notes=$('.notes').val();
-		console.log(checkin,checkout,adult,child,notes);
+		//console.log(checkin,checkout,adult,child,notes);
 
 		var itemString=localStorage.getItem('items');
+		//var itemArray =JSON.parse(itemString);
 		if(itemString){
-			 $.post('/books',{room_data:itemString,checkin:checkin,checkout:checkout,adult:adult,child:child,notes:notes},function (response){
+			 $.post('/books',{room_data:itemString,adult:adult,child:child,notes:notes},function (response){
 			 	if(response){
 			 		alert(response);
 			 		localStorage.clear();
@@ -175,9 +193,12 @@ $(document).ready(function(){
 				var name = v.name;
 				var photo = v.photo;
 				var price = v.price ;
-				var qty = v.qty;
-				var subtotal =Number(price)*Number(qty);
+				var date = v.date;
+				var checkin =v.checkindate;
+				var checkout = v.checkoutdate;
+				var subtotal =Number(price)*Number(date);
 				total += subtotal;
+				//console.log(checkin,checkout);
 
 
 
@@ -188,11 +209,9 @@ $(document).ready(function(){
 					<td><img src="${photo}"  width="90" height ="60"></td>
 					<td>${price}</td>
 					<td>
-						<a class="btn btn-sm btn-danger minus col-sm-2" data-id="${id}" data-qty="${qty}">
-						-</a>
-						${qty}
-						<a class="btn btn-sm btn-danger pluse" data-id="${id}" data-qty="${qty}">
-						+</a>
+						
+						${date}
+						
 					</td>
 					<td>${subtotal}</td>
 					<td>
@@ -202,9 +221,12 @@ $(document).ready(function(){
 					</td>
 				</tr>`
 				j++;
+				
 			});
 			$("#tbody").html(html);
 			$('.total').text(total);
+			
+
 		}
 
 });

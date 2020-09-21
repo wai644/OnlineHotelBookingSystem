@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Room;
 use App\Roomtype;
 use App\Service;
+use App\User;
+use App\Booking;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -69,6 +72,13 @@ class PageController extends Controller
      public function registerfun($value='')
      {
       return view('frontend.register');
+     }
+
+     public function history($id)
+     {
+      $user_id = Auth::id();
+      $bookings = Booking::where('user_id',$user_id)->orderBy('id','DESC')->get();
+        return view('frontend.history',compact('bookings'));
      }
 
 
