@@ -34,7 +34,7 @@ Route::get('roomdetail/{id}','PageController@roomdetail')->name('roomdetail');
 
 Route::get('book','PageController@book')->name('bookpage');
 
-Route::get('history/{id}', 'PageController@history');
+Route::get('history/{id}', 'BookingController@history')->name('history');
 
 
 
@@ -55,7 +55,7 @@ Route::resource('services','ServiceController');
 
 Route::resource('rooms','RoomController');
 
-
+Route::get('book_status/{id}','BookingController@book_status')->name('book_status');
 
 });
 

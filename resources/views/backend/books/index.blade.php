@@ -79,9 +79,12 @@
                   <a href="{{route('books.show',$row->id)}}" class="btn btn-success">
                     <i class="fas fa-info"></i>
                   </a>
-                  <a href="{{route('books.edit',$row->id)}}" class="btn btn-warning">Confirmed</a>
+                  @if($row->status==0)
 
-                  
+                  <a href="{{route('book_status',$row->id)}}" class="btn btn-warning">Confirm</a>
+                  @else
+                  <a class="btn btn-light" disabled="disabled" >Confirmed</a>
+                  @endif   
                   
               </td>
             </tr>

@@ -46,6 +46,8 @@
                     <thead>
                         <tr>
                             <th> No </th>
+                            <th>Checkin</th>
+                            <th>Checkout</th>
                             <th> Name </th>
                             <th> Photo </th>
                             <th> Price </th>
@@ -63,6 +65,8 @@
                    
                        
                         <tr>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

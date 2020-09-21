@@ -190,6 +190,8 @@ $(document).ready(function(){
 
 			$.each(itemArray,function(i,v){
 				var id = v.id;
+				var checkin=v.checkin;
+				var checkout=v.checkout;
 				var name = v.name;
 				var photo = v.photo;
 				var price = v.price ;
@@ -205,6 +207,8 @@ $(document).ready(function(){
 				html+=`
 				<tr>
 					<td>${j}</td>
+					<td>${checkin}</td>
+					<td>${checkout}</td>
 					<td>${name}</td>
 					<td><img src="${photo}"  width="90" height ="60"></td>
 					<td>${price}</td>
@@ -216,7 +220,7 @@ $(document).ready(function(){
 					<td>${subtotal}</td>
 					<td>
 						<button class=" btn-outline-danger remove" data-id="${id}">
-									<i class="fas fa-times">Delete</i>
+									<i class="fas fa-times"></i>
 						</button>
 					</td>
 				</tr>`

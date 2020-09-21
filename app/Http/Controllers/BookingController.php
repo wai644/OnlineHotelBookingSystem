@@ -103,10 +103,7 @@ class BookingController extends Controller
      */
     public function edit($id)
     {
-        $bookings=Booking::all();
-        $booking=Booking::find($id);
 
-         return view('backend.books.edit',compact('booking','bookings'));
     }
 
     /**
@@ -118,18 +115,7 @@ class BookingController extends Controller
      */
     public function update(Request $request, $id)
     {
-       /*$request->validate([
-            "" => ""
 
-        ]);
-       $booking->status=$request->status;
-       $booking->save();*/
-       $booking=Booking::find($id);
-        $booking->status =1;
-        $booking->save();
-
-
-        return redirect()->route('books.index');
     }
 
     /**
@@ -140,7 +126,19 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
-        //
+        
+    }
+
+    public function book_status($id)
+    {
+        //dd($id);
+        $book=Booking::find($id);
+        $book->status=1;
+        $book->save();
+
+        return redirect()->route('books.index');
+
+
     }
 
 }
